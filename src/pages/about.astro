@@ -10,6 +10,7 @@ const identity = {
 
 const skills = ["HTML", "CSS", "WordPress", "JavaScript", "R", "Python"]
 
+const skillColor = "navy";
 ---
 
 <html lang="en">
@@ -19,13 +20,13 @@ const skills = ["HTML", "CSS", "WordPress", "JavaScript", "R", "Python"]
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
-    <style>
+    <style define:vars={{skillColor}}>
       h1{
         color: purple;
         font-size: 4rem;
       }
       .skill{
-        color: green;
+        color: var(--skillColor);
         font-weight: bold;
       }
     </style>
